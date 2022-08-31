@@ -33,7 +33,7 @@ public class AppTest extends AbstractTest {
 
     @Test
     void editOrder() {
-        final String url = "https://spirk.ru/my/orders/view/4837181?back=%2fmy%2forders%23pos4837181";
+        final String url = "https://spirk.ru/my/orders/view/4840544?back=%2fmy%2forders%23pos4840544";
         final int orderID = 14325104;
 
         getDriver().navigate().to(url);
@@ -55,7 +55,7 @@ public class AppTest extends AbstractTest {
 
     @Test
     void changeOffice() {
-        final String url = "https://spirk.ru/my/orders/view/4837181?back=%2fmy%2forders%23pos4837181";
+        final String url = "https://spirk.ru/my/orders/view/4840544?back=%2fmy%2forders%23pos4840544";
 
         getDriver().navigate().to(url);
 
