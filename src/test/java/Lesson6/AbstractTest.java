@@ -17,7 +17,7 @@ public abstract class AbstractTest {
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--incognito");
-        //options.addArguments("--headless");
+        options.addArguments("--headless");
         options.addArguments("start-maximized");
         driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
@@ -42,6 +42,10 @@ public abstract class AbstractTest {
         LoginPage loginPage = new LoginPage(getDriver());
         loginPage.logOut();
         Assertions.assertDoesNotThrow(() -> loginPage.getAuthInfo());
+
+    }
+    @AfterAll
+    static void logOut() {
         driver.quit();
     }
 

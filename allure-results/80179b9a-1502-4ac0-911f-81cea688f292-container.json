@@ -1,0 +1,1 @@
+{"uuid":"80179b9a-1502-4ac0-911f-81cea688f292","name":"logOut()","children":["bd727a9d-8606-4a68-90b2-8890206c864e"],"befores":[{"name":"auth","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1662527228956,"stop":1662527230948}],"afters":[],"start":1662527228956,"stop":1662527233166}

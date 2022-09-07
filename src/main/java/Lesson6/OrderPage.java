@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class OrderPage extends AbstractPage {
 
-    @FindBy(xpath = "//*[@data-order_item_id='14325104']")
+    @FindBy(xpath = "//*[@data-order_item_id='14368431']")
     private WebElement editOrderBtn;
 
     @FindBy(xpath = "//input[@class='btn btn-o order-button js-order__submit']")
@@ -16,7 +16,7 @@ public class OrderPage extends AbstractPage {
     @FindBy(xpath = "//input[@name='productCount']")
     private WebElement productCount;
 
-    @FindBy(xpath = "//tr[@id='oi14325104']/td[6]")
+    @FindBy(xpath = "//tr[@id='oi14368431']/td[6]")
     private WebElement tableCount;
 
     @FindBy(xpath = "//*[@class='jsSelectDelivery']")

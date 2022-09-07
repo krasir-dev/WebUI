@@ -1,12 +1,15 @@
 package Lesson6;
 
+import Lesson7.MyUtils;
+import io.qameta.allure.Feature;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class AppTest extends AbstractTest{
-    final String urlOrderPage = "https://spirk.ru/my/orders/view/4840544?back=%2fmy%2forders%23pos4840544";
+    final String urlOrderPage = "https://spirk.ru/my/orders/view/4855888?back=%2fmy%2forders%23pos4855888";
     final String urlPurchasePage = "https://spirk.ru/zakupka/yashkino-i-kdv---samaya-appetitnaya-zakupka-168221";
 
+    @Feature("Тестирование нового заказа")
     @Test
     void newOrder(){
         getDriver().navigate().to(urlPurchasePage);
@@ -15,6 +18,8 @@ public class AppTest extends AbstractTest{
 
         purchasePage.getProductID().click();
         Assertions.assertDoesNotThrow(() -> purchasePage.getSubmitBtn());
+        MyUtils.makeScreenshot(getDriver(),
+                "Lesson7 newOrderTest " + System.currentTimeMillis() + ".png");
 
         purchasePage.getSubmitBtn().click();
         Assertions.assertTrue(purchasePage.getOrderAddedTitle().getText().contains("добавлен"));
@@ -23,6 +28,7 @@ public class AppTest extends AbstractTest{
         Assertions.assertEquals(urlPurchasePage, getDriver().getCurrentUrl());
     }
 
+    @Feature("ТЕстирование редактирования заказа")
     @Test
     void editOrder() {
 
